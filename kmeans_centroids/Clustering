@@ -1,1 +1,3 @@
-
+The subpopulation can be predicted by using the first 14 PC scores from a new patient with the pdist2 function with squared euclidean distance and finding the min distance
+distances = pdist2(new_data(: , 1:nComp), centroids, 'squaredeuclidean');
+[~, predicted_cluster] = min(distances, [], 2);
