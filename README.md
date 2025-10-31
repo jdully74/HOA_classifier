@@ -21,4 +21,6 @@ Data needs to be stored in a matrix of size n_subjects x 1818. Where 1818 is the
 18. Ankle flexion moment
 
 In  first step, the data hast to be z-normalized using the mean and standarddeviation of the healthy group
-This data can then be mutliplied by the eigenvectors that result in the PC scores for the patients that can be used for the further model building
+This data can then be mutliplied by the eigenvectors that result in the PC scores for the patients that can be used for the further model building.
+All relevant models, preprocessing files and functions can be found in the folder 'Classifier and Function'
+The other folders contain the same data, but split up.
