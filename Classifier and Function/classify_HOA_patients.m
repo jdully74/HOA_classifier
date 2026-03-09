@@ -31,20 +31,24 @@ if ~isempty(pcs_subpopulation_1)% ~= 0
     prediction_1 = HOA_classifier.models.svm_subpopulation_1.svm1.predict(pcs_subpopulation_1);
 else
     disp('No Patients were clustered to Subpopulation 1')
+    prediction_1=[];
 end
 
 if ~isempty(pcs_subpopulation_2)% ~= 0
     prediction_2 = HOA_classifier.models.svm_subpopulation_2.svm2.predict(pcs_subpopulation_2);
 else
-    disp('No Patients were clustered to Subpopulation 1')
+    disp('No Patients were clustered to Subpopulation 2')
+    prediction_2=[];
 end
 
 
 if ~isempty(pcs_subpopulation_3)% ~= 0
     prediction_3 = HOA_classifier.models.svm_subpopulation_3.svm3.predict(pcs_subpopulation_3);
 else
-    disp('No Patients were clustered to Subpopulation 1')
+    disp('No Patients were clustered to Subpopulation 3')
+    prediction_3=[];
 end
+
 
 predictions = struct()
 predictions.subpopoulation_1.gait_data = gait_subpopulation_1;
@@ -59,6 +63,7 @@ predictions.subpopoulation_3.gait_data = gait_subpopulation_3;
 predictions.subpopoulation_3.normed_gait_data = normed_gait_subpopulation_3;
 predictions.subpopoulation_3.pcs = pcs_subpopulation_3;
 predictions.subpopoulation_3.prediction = prediction_3;
+
 
 
 end
